@@ -1,0 +1,7 @@
+/*      Request ID: 91bed5f3fe4d63106312d868b1afcf71_1571067601 (01/26/2021 5:50pm)      */
+
+
+
+/*      Resource ID: bd88f8b2993ab3bfe44bf1c5ebe (jquery.lwGoogleMapsEmbed.js, minified by uglifyjs) (01/26/2021 5:50pm)      */
+
+(function(o){o.widget("lw.lwGoogleMapsEmbed",{options:{api_key:null,is_interactive:false,latitude:null,longitude:null,address:null,width:null,height:null,aspect_ratio:"1:1",zoom:null},_create:function(){var e=this.element;var t=this.options;var i=o('<iframe class="lw_map_iframe" tabindex="-1" frameborder="0" style="border:0" allowfullscreen></iframe>');if(!t.api_key||!t.address&&!(t.latitude&&t.longitude)){return false}var a=t.address?t.address:t.latitude+","+t.longitude;var l="https://www.google.com/maps/embed/v1/place"+"?key="+t.api_key+"&q="+encodeURIComponent(a);if(t.zoom){l+="&zoom="+t.zoom}i.attr("src",l);if(t.width&&t.height){t.width=""+t.width;i.attr("width",t.width.replace("/px/",""));t.height=""+t.height;i.attr("height",t.height.replace("/px/",""))}else{i=o('<div class="lw_responsive_iframe_wrapper"></div>').append(i)}if(typeof t.aspect_ratio==="string"){var r=t.aspect_ratio.split(":");if(r.length===2&&o.isNumeric(r[0])&&o.isNumeric(r[1])){var s=r[1]/r[0];i.css("padding-top",(s*100).toFixed(2)+"%")}}o(e).html(i)}})})(livewhale.jQuery||jQuery);
